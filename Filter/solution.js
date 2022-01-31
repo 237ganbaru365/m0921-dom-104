@@ -48,9 +48,10 @@ const searchFilter = () => {
     let persons = document.getElementsByTagName("li");
 
     Array.from(persons).forEach((person) => {
-      //   console.dir(person);
-      //   console.log(person.childNodes[3].textContent);
-      let personText = person.childNodes[3].textContent;
+      console.dir(person);
+      //childNodes
+      let childIndex = 3;
+      let personText = person.childNodes[childIndex].textContent;
 
       if (personText.toLocaleLowerCase().indexOf(searchChar) !== -1) {
         person.style.display = "block";
